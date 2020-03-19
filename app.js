@@ -12,8 +12,9 @@ let app = express();
 // config
 // =================================================
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', exphbs());
-app.set('view engine', 'handlebars');
+// app.engine('handlebars', exphbs());
+// app.set('view engine', 'handlebars');
+app.set('view engine', 'pug');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
